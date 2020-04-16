@@ -7,16 +7,17 @@
 
     <style>
       video {
-        position: fixed;
-        top: 0;
-        left: 0;
 
-        width: 100%;
+        width: 50%;
         height: 100%;
+      }
+
+      video.local {
+        float: left;
       }
     </style>
   </head>
   <body>
-    <video id='video' controls autoplay></video>
+    <video class='local' id='video' controls autoplay></video>
   </body>
 </html>

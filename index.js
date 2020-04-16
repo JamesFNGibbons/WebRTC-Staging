@@ -26,6 +26,12 @@ app.get('/client', (req, res) => {
 app.get('/sender', (req, res) => {
   res.sendFile(`${__dirname}/sender/sender.html`);
 });
+app.get('/clientA', (req, res) => {
+  res.sendFile(`${__dirname}/client/clientA.html`);
+});
+app.get('/clientB', (req, res) => {
+  res.sendFile(`${__dirname}/client/clientB.html`);
+});
 
 // Serve the frontend js for the client / server apps.
 app.use(express.static('lib'));

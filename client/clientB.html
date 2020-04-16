@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Client B</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script src='/clientB.js'></script>
+
+    <style>
+      .video-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-prev-wrap {
+        width: 250px;
+        height: 230px;
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: red;
+
+        position: fixed;
+        bottom: 100px;
+        right: 50px;
+
+        z-index: 99999999;
+      }
+
+      .video-prev-wrap button {
+        width: 100%;
+        height: 50px;
+
+        line-height: 50px;
+        margin-top: 10px;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='video-wrap'>
+      <video autoplay id='remote'></video>
+    </div>
+    <div class='video-prev-wrap'>
+      <video muted autoplay id='prev'></video>
+      <button id='callBtn'>Start Call</button>
+    </div>
+  </body>
+</html>
