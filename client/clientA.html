@@ -6,6 +6,10 @@
     <script src='/clientA.js'></script>
 
     <style>
+      html, body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
       .video-wrap {
         position: fixed;
         top: 0;
@@ -21,7 +25,7 @@
 
         border-style: solid;
         border-width: 2px;
-        border-color: red;
+        border-color: #857ee6be;;
 
         position: fixed;
         bottom: 100px;
@@ -42,9 +46,27 @@
         width: 100%;
         height: 100%;
       }
+
+      .status-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 50px;
+
+        line-height: 50px;
+        background-color: #857ee6be;
+
+        text-align: center;
+        color: white;
+      }
     </style>
   </head>
   <body>
+    <div class='status-bar' id='header'>
+      Attempting connection. Please wait ...
+    </div>
     <div class='video-wrap'>
       <video autoplay id='remote'></video>
     </div>
